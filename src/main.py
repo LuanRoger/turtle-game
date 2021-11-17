@@ -6,7 +6,7 @@ from apple import Apple, AppleType
 
 #region Window---------------------------------------------------------------------------------------------
 window = turtle.Screen()
-window.title("Game of the year")
+window.title("Turtle Game - by ROG")
 window.bgcolor("black")
 
 #region Instanciations--------------------------------------------------------------------------------------

@@ -11,6 +11,7 @@ class Player(Element):
 
     def __init__(self, x: int, y: int, arena: Arena, shape: str = "arrow", color: str = "white"):
         super().__init__(x=x, y=y, arena=arena, shape=shape, color=color)
+        super().shapesize(1.5)
 
     #region Player input----------------------------------------------------------------------------
     def go_forward(self):

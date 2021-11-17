@@ -17,7 +17,7 @@ class Apple(Element):
         self.apple_type = type
     
     #Override
-    def drawn(self, size: int = 10):
+    def drawn(self, size: int = 15):
         super().dot(size)
     
     def randomize_location(self):

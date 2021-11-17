@@ -38,17 +38,13 @@ class Arena:
         #Diagonal vertex
         self.arena_limit_vertex.append((self.arena_renderer.xcor(), self.arena_renderer.ycor()))
         self.arena_renderer.setheading(0)
-        self.arena_renderer.forward(side_size[0])
-        self.arena_renderer.left(90)
-        self.arena_renderer.forward(side_size[1])
-        #Before return get the max vertex limit - Diagonal vertex
-        self.arena_limit_vertex.append((self.arena_renderer.xcor(), self.arena_renderer.ycor()))
-        self.arena_renderer.left(90)
-        self.arena_renderer.forward(side_size[0])
-        self.arena_renderer.left(90)
-        self.arena_renderer.forward(side_size[1])
-
-        print(self.arena_limit_vertex)
+        for vertex in range(4):
+            side: int = 0 if vertex % 2 == 0 else 1
+            self.arena_renderer.forward(side_size[side])
+            self.arena_renderer.left(90)
+            #Before return get the max vertex limit - Diagonal vertex
+            if(vertex == 1):
+                self.arena_limit_vertex.append((self.arena_renderer.xcor(), self.arena_renderer.ycor()))
 
         self.arena_renderer.penup()
 
